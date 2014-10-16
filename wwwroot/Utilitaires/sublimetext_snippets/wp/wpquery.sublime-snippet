@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+\$the_query = new WP_Query('post_type=${1:foo}&posts_per_page=${2:-1}');
+if ( \$the_query->have_posts() ) :
+while ( \$the_query->have_posts() ) : \$the_query->the_post();
+
+// do stuffs
+
+endwhile;
+endif;
+wp_reset_query();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>gbl_query</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

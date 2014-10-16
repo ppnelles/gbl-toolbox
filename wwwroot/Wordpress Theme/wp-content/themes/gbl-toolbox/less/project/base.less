@@ -1,0 +1,204 @@
+// ==========================================================================
+// Liens
+// ==========================================================================
+
+a {
+  color: @link-color;
+  text-decoration: underline;
+
+  .no-touch &:hover,
+  .no-touch &:focus {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+::-moz-selection { 
+  background: @link-hover-color; 
+  color: @text-color; 
+  text-shadow: none; 
+}
+
+::selection { 
+  background: @link-hover-color; 
+  color: @text-color; 
+  text-shadow: none; 
+}
+
+
+// ==========================================================================
+// Structure générale du site
+// ==========================================================================
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 150%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+body {
+  margin: 0;
+  font-family: @font-family-sans-serif;
+  font-weight: 400; 
+  -webkit-font-smoothing: antialiased;
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+
+strong,
+b {
+  font-weight: 700;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 2em;
+}
+
+button {
+  background: transparent;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+button[title] {
+  background-color: black;
+}
+
+
+
+
+
+
+// ==========================================================================
+// Menu #access de Wordpress
+// ==========================================================================
+
+#access {
+
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 0;
+  padding: 0.5em 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    clear: both;
+
+    @media (min-width: @screen-md) {
+      padding: 0;
+      clear: inherit;
+    }
+  }
+
+  li {
+
+    @media (min-width: @screen-md) {
+      float: left;
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 110%;
+    line-height: 2em;
+    padding: 1em;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+
+  }
+
+
+
+  li.current-menu-item a {
+    text-decoration: underline;
+  }
+
+  ul ul {
+    display: none;
+    float: left;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    z-index: 99999;
+  }
+
+  ul ul ul {
+    left: 100%;
+    top: 0;
+  }
+
+  ul ul a {
+    line-height: 1em;
+    padding: .5em .5em .5em 1em;
+    width: 10em;
+    height: auto;
+  }
+
+  ul li:hover > ul {
+    display: block;
+  } 
+
+
+}
+
+
+
+
+
+
+
+
+
+#access.close  {
+
+  .menu-menu-1-container {
+    display: none;
+
+    @media (min-width: @screen-md) {
+        display: block;
+    }
+
+  }
+}
+
+
+
+
+
+#access-trigger {
+  float: right;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999em;
+  background-image: url('img/trigger.svg?v=7');
+  margin: 10px 0 0;
+  .background-size(40px 40px);
+
+  .no-svg & {
+    background-image: url('img/trigger.png');
+  }
+
+  @media (min-width: @screen-md) {
+      display: none;
+  }
+
+}
+
+

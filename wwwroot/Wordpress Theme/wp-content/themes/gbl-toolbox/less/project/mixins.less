@@ -1,0 +1,14 @@
+.rem(@property, @sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  @property: ~"@{pxValue}px"; 
+  @property: ~"@{remValue}rem";
+}
+
+.ctn() {
+	display: block;
+	width: 90%;
+	max-width: 1600px;
+	margin: 0 auto;
+	.cf();
+}

@@ -1,0 +1,188 @@
+/*
+Theme Name: GBL-Toolbox
+Theme URI: http://www.globulebleu.com
+Author: Globule Bleu
+Author URI: http://www.globulebleu.com
+Description: A semantic, HTML5, Less powered and (most importantly) looking good theme. Made with love by Globule Bleu
+Version: 3.0
+*/
+
+// Core variables and mixins
+@import "./booststrap3/variables.less";
+@import "./booststrap3/mixins.less";
+//@import "./booststrap3/mixins-unresponsive.less";
+
+// Reset
+@import "./booststrap3/normalize.less";
+@import "./booststrap3/print.less";
+
+// Core CSS
+@import "./booststrap3/scaffolding.less";
+@import "./booststrap3/grid.less";
+
+/*
+* LOAD ONLY WHAT YOU NEED !
+*/
+
+// Help CSS
+// @import "./booststrap3/type.less";
+// @import "./booststrap3/code.less";
+// @import "./booststrap3/tables.less";
+// @import "./booststrap3/forms.less";
+// @import "./booststrap3/buttons.less";
+
+// Components
+
+// @import "./booststrap3/component-animations.less";
+// @import "./booststrap3/glyphicons.less";
+// @import "./booststrap3/dropdowns.less";
+// @import "./booststrap3/button-groups.less";
+// @import "./booststrap3/input-groups.less";
+// @import "./booststrap3/navs.less";
+// @import "./booststrap3/navbar.less";
+// @import "./booststrap3/breadcrumbs.less";
+// @import "./booststrap3/pagination.less";
+// @import "./booststrap3/pager.less";
+// @import "./booststrap3/labels.less";
+// @import "./booststrap3/badges.less";
+// @import "./booststrap3/jumbotron.less";
+// @import "./booststrap3/thumbnails.less";
+// @import "./booststrap3/alerts.less";
+// @import "./booststrap3/progress-bars.less";
+// @import "./booststrap3/media.less";
+// @import "./booststrap3/list-group.less";
+// @import "./booststrap3/panels.less";
+// @import "./booststrap3/wells.less";
+// @import "./booststrap3/close.less";
+
+// Components w/ JavaScript
+// @import "./booststrap3/modals.less";
+// @import "./booststrap3/tooltip.less";
+// @import "./booststrap3/popovers.less";
+// @import "./booststrap3/carousel.less";
+
+// WP
+@import "./booststrap3/wp.less";
+
+// Utility classes
+@import "./booststrap3/3l.less";
+@import "./booststrap3/utilities.less";
+@import "./booststrap3/responsive-utilities.less";
+
+/* Facebook boxes - To fill the container and nothing else  */
+
+#fb-root {
+    display: none;
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}
+
+// Project styles start here
+
+/* Body reset
+------------------------- */
+
+body {
+  margin: 0;
+  font-family: @font-family-sans-serif;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+
+/* Links
+------------------------- */
+
+a {
+  color: @link-color;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: @link-hover-color;
+  text-decoration: underline;
+}
+
+a:active,
+a:focus {
+  outline: none;
+	-moz-outline-style: none;
+}
+
+::-moz-selection { 
+  background: @link-color; 
+  color: #fff; 
+  text-shadow: none; 
+}
+
+::selection { 
+  background: @link-color; 
+  color: #fff; 
+  text-shadow: none; 
+}
+
+#page {
+  .make-container();
+}
+
+#main {
+  .make-row();
+}
+
+#header-main {
+  .make-row;
+}
+
+#header-main > * {
+  .make-md-column(12);
+}
+
+#primary {
+  .make-md-column(8);
+}
+
+#secondary {
+  .make-md-column(3);
+  .make-md-column-offset(1);
+}
+
+#footer-main {
+  .make-container();
+}
+
+#footer-main #colophon {
+  .make-row();
+}
+
+#footer-main #colophon > p {
+  .make-md-column(6);
+}
+
+#footer-main #colophon > p.copyright {
+  text-align: right;
+}
+
+/*  **************************
+*
+* Mobile First - Media Queries 
+*
+************************* */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg) {
+
+}
